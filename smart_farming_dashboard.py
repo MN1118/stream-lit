@@ -4,6 +4,7 @@ import numpy as np
 import streamlit as st
 from sklearn.linear_model import LinearRegression
 import warnings
+import streamlit as st
 
 # ----------------------------------------------------------
 # 🔧 CONFIGURATION
@@ -11,7 +12,7 @@ import warnings
 warnings.filterwarnings("ignore")  # hide minor sklearn warnings
 
 # <-- Replace with your real API key
-API_KEY = "1314dd76846285b8137e47d9ac8e4786"
+API_KEY = st.secrets["OPENWEATHER_API_KEY"]
 CITY = "Nashik,IN"
 WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather"
 
